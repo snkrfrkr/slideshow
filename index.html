@@ -40,14 +40,14 @@ img {vertical-align: middle;}
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
+  background-color: #ffffff;
+  border-radius: 100%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: #717171;
+  background-color: #ffffff;
 }
 
 /* Fading animation */
@@ -58,9 +58,22 @@ img {vertical-align: middle;}
   animation-duration: 1.5s;
 }
 
-.params{
-  width: 780px;
-  height: 1200px;
+.pdf_params{
+  width: 700px;
+  height: 1000px;
+  align-content: center;
+}
+
+.text_params{
+  text-align: center;
+  vertical-align: middle;
+  font-size: 100px;
+}
+
+.hashtag_params{
+  text-align: center;
+  vertical-align: middle;
+  font-size: 100px;
 }
 
 @-webkit-keyframes fade {
@@ -87,15 +100,30 @@ img {vertical-align: middle;}
 </div>
 
 <div class="mySlides fade">
-  <embed class="params" src="01.pdf" type="application/pdf">
+  <embed class="pdf_params" src="01.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
 </div>
 
 <div class="mySlides fade">
-  <embed class="params" src="02.pdf" type="application/pdf">
+  <h1 class="hashtag_params">#nieohnemeinteam</h1>
+  <h3 class="text_params">neu im Team</h3>
 </div>
 
 <div class="mySlides fade">
-  <embed class="params" src="03.pdf" type="application/pdf">
+  <embed class="pdf_params" src="02.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
+</div>
+
+<div class="mySlides fade">
+  <embed class="pdf_params" src="03.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
+</div>
+
+
+<div class="mySlides fade">
+  <h1 class="hashtag_params">FREUTAG</h1>
+</div>
+
+<div class="mySlides fade">
+  <h1 class="text_params">Hello HAKRO</h1>
+  <h3 class="text_params">Heute ist Meeting</h3>
 </div>
 
 </div>
@@ -105,7 +133,10 @@ img {vertical-align: middle;}
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
-  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
 </div>
 
 <script>
@@ -126,7 +157,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  setTimeout(showSlides, 1000); // Change image every 2 seconds
 }
 </script>
 
